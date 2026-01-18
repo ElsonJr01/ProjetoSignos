@@ -6,11 +6,11 @@
       "use": "@vercel/php"
     },
     {
-      "src": "layouts/*.php",
+      "src": "layouts/**/*.php",
       "use": "@vercel/php"
     },
     {
-      "src": "assets/**/*",
+      "src": "assets/**",
       "use": "@vercel/static"
     },
     {
@@ -19,18 +19,6 @@
     }
   ],
   "routes": [
-    {
-      "src": "/index.php",
-      "dest": "/index.php"
-    },
-    {
-      "src": "/show_zodiac_sign.php",
-      "dest": "/show_zodiac_sign.php"
-    },
-    {
-      "src": "/layouts/(.*)",
-      "dest": "/layouts/$1"
-    },
     {
       "src": "/assets/(.*)",
       "dest": "/assets/$1"

@@ -1,61 +1,77 @@
 <?php include('layouts/header.php'); ?>
 
 <?php
-$data_nascimento = $_POST['data_nascimento'] ?? '';
+$data_nascimento = $_POST['data_nascimento'] ?? null;
 
-$dia = date('d', strtotime($data_nascimento));
-$mes = date('m', strtotime($data_nascimento));
-
-$signos = simplexml_load_file("signos.xml");
 $signo_encontrado = null;
 
-foreach ($signos->signo as $signo) {
-    list($diaInicio, $mesInicio) = explode('/', $signo->dataInicio);
-    list($diaFim, $mesFim) = explode('/', $signo->dataFim);
+if ($data_nascimento) {
 
-    // Caso normal
-    if ($mesInicio < $mesFim || ($mesInicio == $mesFim && $diaInicio <= $diaFim)) {
+    // Dia e mês do usuário (como INTEIRO)
+    $dia = (int) date('d', strtotime($data_nascimento));
+    $mes = (int) date('m', strtotime($data_nascimento));
+
+    // Carrega o XML
+    $signos = simplexml_load_file("signos.xml");
+
+    foreach ($signos->signo as $signo) {
+
+        list($diaInicio, $mesInicio) = explode('/', (string)$signo->dataInicio);
+        list($diaFim, $mesFim)       = explode('/', (string)$signo->dataFim);
+
+        // Converte tudo para INTEIRO
+        $diaInicio = (int)$diaInicio;
+        $mesInicio = (int)$mesInicio;
+        $diaFim    = (int)$diaFim;
+        $mesFim    = (int)$mesFim;
+
+        // Signos que NÃO cruzam o ano
         if (
-            ($mes > $mesInicio || ($mes == $mesInicio && $dia >= $diaInicio)) &&
-            ($mes < $mesFim || ($mes == $mesFim && $dia <= $diaFim))
+            ($mesInicio < $mesFim) ||
+            ($mesInicio == $mesFim && $diaInicio <= $diaFim)
         ) {
-            $signo_encontrado = $signo;
-            break;
+            if (
+                ($mes > $mesInicio || ($mes == $mesInicio && $dia >= $diaInicio)) &&
+                ($mes < $mesFim || ($mes == $mesFim && $dia <= $diaFim))
+            ) {
+                $signo_encontrado = $signo;
+                break;
+            }
         }
-    } 
-    // Caso que cruza o ano
-    else {
-        if (
-            ($mes > $mesInicio || ($mes == $mesInicio && $dia >= $diaInicio)) ||
-            ($mes < $mesFim || ($mes == $mesFim && $dia <= $diaFim))
-        ) {
-            $signo_encontrado = $signo;
-            break;
+        // Signos que CRUZAM o ano (Capricórnio)
+        else {
+            if (
+                ($mes > $mesInicio || ($mes == $mesInicio && $dia >= $diaInicio)) ||
+                ($mes < $mesFim || ($mes == $mesFim && $dia <= $diaFim))
+            ) {
+                $signo_encontrado = $signo;
+                break;
+            }
         }
     }
 }
 ?>
 
-<h2 class="text-center mb-4">Resultado</h2>
+<h2 class="text-center mb-4">✨ Resultado do seu Signo ✨</h2>
 
 <?php if ($signo_encontrado): ?>
     <div class="card p-4 shadow text-center result-card">
         <h3><?= $signo_encontrado->signoNome ?></h3>
         <p><?= $signo_encontrado->descricao ?></p>
-        <span class="badge bg-primary mb-2">
-            <?= $signo_encontrado->dataInicio ?> - <?= $signo_encontrado->dataFim ?>
+
+        <span class="badge bg-primary">
+            <?= $signo_encontrado->dataInicio ?> até <?= $signo_encontrado->dataFim ?>
         </span>
-        <br>
-        <a href="index.php" class="btn btn-secondary mt-3">Voltar</a>
+
+        <br><br>
+        <a href="index.php" class="btn btn-secondary">Voltar</a>
     </div>
 <?php else: ?>
-    <p class="text-danger text-center">Signo não encontrado.</p>
+    <p class="text-danger text-center">Não foi possível identificar o signo.</p>
 <?php endif; ?>
 
 </div>
 
-<!-- JS para emojis mágicos -->
 <script src="assets/js/magic.js"></script>
-
 </body>
 </html>
