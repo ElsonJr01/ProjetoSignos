@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<signos>
+    <signo>
+        <dataInicio>21/03</dataInicio>
+        <dataFim>20/04</dataFim>
+        <signoNome>Áries</signoNome>
+        <descricao>Pessoas de Áries são corajosas, determinadas e cheias de energia. 🧨</descricao>
+    </signo>
+    <signo>
+        <dataInicio>21/04</dataInicio>
+        <dataFim>20/05</dataFim>
+        <signoNome>Touro</signoNome>
+        <descricao>Pessoas de Touro são pacientes, confiáveis e amantes do conforto. 🌿</descricao>
+    </signo>
+    <signo>
+        <dataInicio>21/05</dataInicio>
+        <dataFim>20/06</dataFim>
+        <signoNome>Gêmeos</signoNome>
+        <descricao>Pessoas de Gêmeos são comunicativas, curiosas e inteligentes. 💫</descricao>
+    </signo>
+    <signo>
+        <dataInicio>21/06</dataInicio>
+        <dataFim>22/07</dataFim>
+        <signoNome>Câncer</signoNome>
+        <descricao>Pessoas de Câncer são sensíveis, protetoras e empáticas. 🌊</descricao>
+    </signo>
+    <signo>
+        <dataInicio>23/07</dataInicio>
+        <dataFim>22/08</dataFim>
+        <signoNome>Leão</signoNome>
+        <descricao>Pessoas de Leão são confiantes, criativas e líderes natos. 🔥</descricao>
+    </signo>
+    <signo>
+        <dataInicio>23/08</dataInicio>
+        <dataFim>22/09</dataFim>
+        <signoNome>Virgem</signoNome>
+        <descricao>Pessoas de Virgem são organizadas, detalhistas e inteligentes. 🍀</descricao>
+    </signo>
+    <signo>
+        <dataInicio>23/09</dataInicio>
+        <dataFim>22/10</dataFim>
+        <signoNome>Libra</signoNome>
+        <descricao>Pessoas de Libra são equilibradas, sociais e elegantes. ⚖️</descricao>
+    </signo>
+    <signo>
+        <dataInicio>23/10</dataInicio>
+        <dataFim>21/11</dataFim>
+        <signoNome>Escorpião</signoNome>
+        <descricao>Pessoas de Escorpião são intensas, determinadas e misteriosas. 🦂</descricao>
+    </signo>
+    <signo>
+        <dataInicio>22/11</dataInicio>
+        <dataFim>21/12</dataFim>
+        <signoNome>Sagitário</signoNome>
+        <descricao>Pessoas de Sagitário são aventureiras, otimistas e livres. 🏹</descricao>
+    </signo>
+    <signo>
+        <dataInicio>22/12</dataInicio>
+        <dataFim>20/01</dataFim>
+        <signoNome>Capricórnio</signoNome>
+        <descricao>Pessoas de Capricórnio são responsáveis, disciplinadas e ambiciosas. 🏔️</descricao>
+    </signo>
+    <signo>
+        <dataInicio>21/01</dataInicio>
+        <dataFim>18/02</dataFim>
+        <signoNome>Aquário</signoNome>
+        <descricao>Pessoas de Aquário são criativas, independentes e visionárias. 🌌</descricao>
+    </signo>
+    <signo>
+        <dataInicio>19/02</dataInicio>
+        <dataFim>20/03</dataFim>
+        <signoNome>Peixes</signoNome>
+        <descricao>Pessoas de Peixes são sensíveis, intuitivas e sonhadoras. 🌊</descricao>
+    </signo>
+</signos>
