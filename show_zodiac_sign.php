@@ -7,7 +7,6 @@ $dia = date('d', strtotime($data_nascimento));
 $mes = date('m', strtotime($data_nascimento));
 
 $signos = simplexml_load_file("signos.xml");
-
 $signo_encontrado = null;
 
 foreach ($signos->signo as $signo) {

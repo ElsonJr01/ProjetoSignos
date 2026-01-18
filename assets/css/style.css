@@ -111,25 +111,16 @@ p{
 
 /* Emojis flutuantes - balões subindo */
 @keyframes floatUp {
-    0% {
-        bottom: -50px; /* começa abaixo da tela */
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    100% {
-        bottom: 110vh; /* sobe acima da tela */
-        opacity: 0;
-    }
+    0% { bottom: -50px; opacity: 0; transform: translateX(0) rotate(0deg); }
+    10% { opacity: 1; }
+    100% { bottom: 110vh; opacity: 0; transform: translateX(50px) rotate(360deg); }
 }
-
 .flying-emoji {
     position: absolute;
     font-size: 2rem;
     animation-name: floatUp;
     animation-timing-function: linear;
-    animation-iteration-count: 1; /* cada emoji sobe uma vez e some */
+    animation-iteration-count: 1;
     pointer-events: none;
     user-select: none;
 }

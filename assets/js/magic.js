@@ -6,29 +6,37 @@ function createEmoji() {
     emoji.classList.add('flying-emoji');
 
     // Escolhe emoji aleatório
-    emoji.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+    emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
-    // posição horizontal aleatória
-    emoji.style.left = Math.random() * 100 + 'vw';
+    // Posição horizontal aleatória
+    emoji.style.left = Math.random() * 95 + 'vw';
 
-    // tamanho aleatório
+    // Tamanho aleatório
     const size = 20 + Math.random() * 30;
     emoji.style.fontSize = size + 'px';
 
-    // duração aleatória
-    const duration = 4 + Math.random() * 6; // entre 4s e 10s
+    // Duração aleatória da animação
+    const duration = 5 + Math.random() * 7;
     emoji.style.animationDuration = duration + 's';
 
-    // define posição inicial
+    // Rotação inicial aleatória
+    const rotation = Math.random() * 360; 
+    emoji.style.transform = `rotate(${rotation}deg)`;
+
+    // Delay inicial aleatório
+    const delay = Math.random() * 2;
+    emoji.style.animationDelay = delay + 's';
+
+    // Posição inicial
     emoji.style.bottom = '-50px';
 
     container.appendChild(emoji);
 
-    // remove emoji após a animação terminar
+    // Remove emoji após a animação
     setTimeout(() => {
         if (container.contains(emoji)) container.removeChild(emoji);
-    }, duration * 1000);
+    }, (duration + delay) * 1000);
 }
 
-// Cria emojis a cada 300ms
-setInterval(createEmoji, 300);
+// Cria emojis a cada 250ms para fluxo contínuo
+setInterval(createEmoji, 250);
