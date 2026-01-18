@@ -1,118 +1,101 @@
-🧙‍♀️ Projeto Descubra Seu Signo Zodiacal ✨
-Descrição do Projeto
+# ProjetoSignos
 
-Este é um projeto desenvolvido como atividade prática da disciplina Programação Web, Unidade 4, Seção 4.3, pelo aluno Elson da Silva Sousa.
+![ProjetoSignos Banner](assets/img/banner.png) <!-- Substitua pelo caminho correto da sua imagem, se tiver -->
 
-O projeto consiste em uma aplicação web que permite ao usuário descobrir o seu signo zodiacal a partir da sua data de nascimento. Além de exibir o signo, a aplicação mostra as principais características do mesmo de forma interativa e estilizada.
+## 📖 Descrição
 
-O diferencial do projeto é a inclusão de animações divertidas, como emojis de bruxas e bolas mágicas subindo na tela, criando uma experiência lúdica para o usuário.
+O **ProjetoSignos** é uma aplicação web desenvolvida em **PHP, HTML, CSS e JavaScript**, que permite aos usuários descobrir seu signo baseado em sua data de nascimento. O projeto também utiliza um arquivo XML (`signos.xml`) para armazenar as informações sobre cada signo.
 
-Tecnologias Utilizadas
+Este projeto tem como objetivo **praticar desenvolvimento web**, manipulação de arquivos XML e integração entre front-end e back-end.
 
-HTML5 – estrutura da aplicação
+---
 
-CSS3 – estilização e animações, incluindo gradientes e efeitos hover
+## 🛠️ Tecnologias Utilizadas
 
-Bootstrap 5 – framework para layout responsivo e elementos visuais
+- **PHP** - Processamento do back-end
+- **HTML5** - Estrutura das páginas
+- **CSS3** - Estilização
+- **JavaScript** - Interatividade
+- **XML** - Armazenamento dos dados dos signos
 
-PHP – processamento do formulário e leitura do XML
+---
 
-XML – armazenamento de dados de cada signo
+## 🗂 Estrutura do Projeto
 
-VSCode – editor de código
-
-XAMPP – servidor local para execução de PHP
-
-Funcionalidades
-
-Formulário para inserção da data de nascimento
-
-Consulta ao arquivo XML contendo informações de todos os signos
-
-Exibição do signo correspondente e suas características
-
-Botão para voltar à página inicial
-
-Animações de emojis flutuantes (🧙‍♀️ e ✨)
-
-Layout responsivo e moderno
-
-Validação do campo de data pelo HTML5
-
-Instalação e Execução
-
-Clonar o repositório ou baixar os arquivos do projeto:
-
-git clone https://github.com/usuario/projeto-signos.git
-
-
-Instalar o XAMPP (ou outro servidor local) e iniciar Apache.
-
-Mover a pasta do projeto para o diretório htdocs do XAMPP:
-
-C:\xampp\htdocs\Project
-
-
-Abrir o projeto no VSCode ou outro editor de sua preferência.
-
-Executar no navegador acessando:
-
-http://localhost/Project/index.php
-
-Estrutura do Projeto
-Project/
+ProjectSignos/
 │
-├─ assets/
-│  ├─ css/
-│  │   └─ style.css          # Estilização principal
-│  ├─ js/                    # Scripts (se necessário)
-│  └─ imgs/                  # Imagens usadas no projeto
+├── assets/
+│ ├── css/
+│ │ └── style.css
+│ ├── js/
+│ │ └── magic.js
 │
-├─ layouts/
-│  └─ header.php             # Cabeçalho e link para Bootstrap
+├── layouts/
+│ └── header.php
 │
-├─ index.php                 # Página inicial com formulário
-├─ show_zodiac_sign.php      # Página de resultado do signo
-└─ signos.xml                # Dados de todos os signos
+├── index.php
+├── show_zodiac_sign.php
+├── signos.xml
+└── README.md
 
-Como Funciona
 
-O usuário insere a data de nascimento no formulário da página inicial.
+---
 
-O formulário envia os dados para show_zodiac_sign.php via POST.
+## 🚀 Funcionalidades
 
-O PHP lê o arquivo signos.xml, identifica o signo correto de acordo com a data informada e retorna o resultado.
+1. Entrada da data de nascimento do usuário.
+2. Identificação automática do signo correspondente.
+3. Exibição das características e informações do signo.
+4. Interface simples e responsiva.
 
-A página de resultado exibe:
+---
 
-Nome do signo
+## 💻 Como Executar
 
-Descrição
+1. Certifique-se de ter **PHP** e um servidor local (ex: **XAMPP**) instalados.
+2. Clone este repositório:
 
-Botão para voltar à página inicial
+```bash
+git clone https://github.com/ElsonJr01/ProjetoSignos.git
 
-Emojis animados flutuam na tela, simulando balões e efeitos mágicos.
+Copie os arquivos para a pasta do servidor local (htdocs no XAMPP).
 
-Exemplos de Uso
+Abra o navegador e acesse:
+http://localhost/ProjectSignos/
 
-Página Inicial:
+Insira sua data de nascimento e descubra seu signo!
 
-Página de Resultado:
+📌 Observações
 
-Personalizações Futuras
+O arquivo signos.xml contém os dados dos 12 signos do zodíaco. Alterações devem ser feitas com cuidado.
+O projeto foi desenvolvido como prática de estudo e aprendizado de PHP e manipulação de dados XML.
 
-Adicionar imagens ou ícones de cada signo zodiacal.
+👨‍💻 Autor
 
-Permitir personalização do tema (cores e gradientes).
+Elson Jr.
+GitHub
 
-Implementar mais animações e interatividade com JavaScript.
+📄 Licença
 
-Criar versão mobile ainda mais otimizada.
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+MIT License
 
-Autor
+Copyright (c) 2026 Elson Jr.
 
-Elson da Silva Sousa – aluno do curso de Sistemas de Informação na Faculdade Anhanguera.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Licença
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Este projeto é de uso acadêmico, livre para estudo e desenvolvimento, sem fins comerciais.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
