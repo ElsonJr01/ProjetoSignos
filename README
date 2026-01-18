@@ -1,0 +1,118 @@
+🧙‍♀️ Projeto Descubra Seu Signo Zodiacal ✨
+Descrição do Projeto
+
+Este é um projeto desenvolvido como atividade prática da disciplina Programação Web, Unidade 4, Seção 4.3, pelo aluno Elson da Silva Sousa.
+
+O projeto consiste em uma aplicação web que permite ao usuário descobrir o seu signo zodiacal a partir da sua data de nascimento. Além de exibir o signo, a aplicação mostra as principais características do mesmo de forma interativa e estilizada.
+
+O diferencial do projeto é a inclusão de animações divertidas, como emojis de bruxas e bolas mágicas subindo na tela, criando uma experiência lúdica para o usuário.
+
+Tecnologias Utilizadas
+
+HTML5 – estrutura da aplicação
+
+CSS3 – estilização e animações, incluindo gradientes e efeitos hover
+
+Bootstrap 5 – framework para layout responsivo e elementos visuais
+
+PHP – processamento do formulário e leitura do XML
+
+XML – armazenamento de dados de cada signo
+
+VSCode – editor de código
+
+XAMPP – servidor local para execução de PHP
+
+Funcionalidades
+
+Formulário para inserção da data de nascimento
+
+Consulta ao arquivo XML contendo informações de todos os signos
+
+Exibição do signo correspondente e suas características
+
+Botão para voltar à página inicial
+
+Animações de emojis flutuantes (🧙‍♀️ e ✨)
+
+Layout responsivo e moderno
+
+Validação do campo de data pelo HTML5
+
+Instalação e Execução
+
+Clonar o repositório ou baixar os arquivos do projeto:
+
+git clone https://github.com/usuario/projeto-signos.git
+
+
+Instalar o XAMPP (ou outro servidor local) e iniciar Apache.
+
+Mover a pasta do projeto para o diretório htdocs do XAMPP:
+
+C:\xampp\htdocs\Project
+
+
+Abrir o projeto no VSCode ou outro editor de sua preferência.
+
+Executar no navegador acessando:
+
+http://localhost/Project/index.php
+
+Estrutura do Projeto
+Project/
+│
+├─ assets/
+│  ├─ css/
+│  │   └─ style.css          # Estilização principal
+│  ├─ js/                    # Scripts (se necessário)
+│  └─ imgs/                  # Imagens usadas no projeto
+│
+├─ layouts/
+│  └─ header.php             # Cabeçalho e link para Bootstrap
+│
+├─ index.php                 # Página inicial com formulário
+├─ show_zodiac_sign.php      # Página de resultado do signo
+└─ signos.xml                # Dados de todos os signos
+
+Como Funciona
+
+O usuário insere a data de nascimento no formulário da página inicial.
+
+O formulário envia os dados para show_zodiac_sign.php via POST.
+
+O PHP lê o arquivo signos.xml, identifica o signo correto de acordo com a data informada e retorna o resultado.
+
+A página de resultado exibe:
+
+Nome do signo
+
+Descrição
+
+Botão para voltar à página inicial
+
+Emojis animados flutuam na tela, simulando balões e efeitos mágicos.
+
+Exemplos de Uso
+
+Página Inicial:
+
+Página de Resultado:
+
+Personalizações Futuras
+
+Adicionar imagens ou ícones de cada signo zodiacal.
+
+Permitir personalização do tema (cores e gradientes).
+
+Implementar mais animações e interatividade com JavaScript.
+
+Criar versão mobile ainda mais otimizada.
+
+Autor
+
+Elson da Silva Sousa – aluno do curso de Sistemas de Informação na Faculdade Anhanguera.
+
+Licença
+
+Este projeto é de uso acadêmico, livre para estudo e desenvolvimento, sem fins comerciais.
